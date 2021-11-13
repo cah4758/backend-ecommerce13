@@ -117,7 +117,7 @@ router.delete("/:id", (req, res) => {
         id: req.params.id,
       },
     });
-    if (!productData[0]) {
+    if (productData[0]) {
       res.status(404).json({ message: "There is no product with this ID!" });
       return;
     }

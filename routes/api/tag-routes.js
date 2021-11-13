@@ -72,7 +72,7 @@ router.delete("/:id", async (req, res) => {
         id: req.params.id,
       },
     });
-    if (!tagData[0]) {
+    if (tagData[0]) {
       res.status(404).json({ message: "There is no tag with this ID!" });
       return;
     }
